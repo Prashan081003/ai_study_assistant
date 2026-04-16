@@ -1,5 +1,5 @@
 # 🚀 AI Study Assistant — Complete Deployment Guide
-**By Prashan Arya | TCS Digital Portfolio Project**
+**By Prashan Arya |  AI Study Assistant**
 
 ---
 

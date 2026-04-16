@@ -74,7 +74,9 @@ export default function UploadZone({ onUpload, uploading }) {
           ))}
         </div>
 
-        <p className={styles.credit}>Built by <strong>Prashan Arya</strong> · TCS Digital Portfolio Project</p>
+         <p className={styles.credit}>
+          Built by <strong>Prashan Arya</strong> · AI Study Assistant
+        </p>
       </div>
     </div>
   )
