@@ -4,7 +4,7 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 const { OpenAI } = require("openai");
-const pdfParse = require("pdf-parse");
+const pdfParse = require("pdf-parse-fork");
 const { RecursiveCharacterTextSplitter } = require("@langchain/textsplitters");
 const { QdrantClient } = require("@qdrant/js-client-rest");
 
@@ -45,15 +45,18 @@ const openai = new OpenAI({
 });
 
 // ── Qdrant Client ───────────────────────────────────────────
-const qdrant = new QdrantClient({
-  url: process.env.QDRANT_URL || "http://localhost:6333",
-  apiKey: process.env.QDRANT_API_KEY,
-});
+let qdrant = null;
 
+if (process.env.QDRANT_URL) {
+  qdrant = new QdrantClient({
+    url: process.env.QDRANT_URL,
+    apiKey: process.env.QDRANT_API_KEY,
+  });
+}
 const COLLECTION = "study_docs";
 const EMBED_MODEL = "text-embedding-3-small";
 const LLM_MODEL =
-  process.env.LLM_MODEL || "mistralai/mistral-7b-instruct:free";
+  process.env.LLM_MODEL || "openai/gpt-4o-mini";
 
 // ── In-memory store for demo mode ──────────────────────────
 let demoDocuments = {};

@@ -2,6 +2,9 @@
   "name": "ai-study-assistant",
   "version": "1.0.0",
   "description": "RAG-based AI Study Assistant — Prashan Arya",
+    "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "install:all": "cd backend && npm install && cd ../frontend && npm install",
     "dev:backend": "cd backend && npm run dev",
