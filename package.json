@@ -1,0 +1,13 @@
+{
+  "name": "ai-study-assistant",
+  "version": "1.0.0",
+  "description": "RAG-based AI Study Assistant — Prashan Arya",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "keywords": ["RAG", "LangChain", "Qdrant", "AI", "LLM", "study-assistant"]
+}

@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 56px;
+  background: var(--ink);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.left { display: flex; align-items: center; gap: 12px; }
+
+.menuBtn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  transition: color 0.15s, background 0.15s;
+}
+.menuBtn:hover { color: white; background: rgba(255,255,255,0.08); }
+
+.logo { display: flex; align-items: center; gap: 8px; }
+.logoText {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+}
+.logoSub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  padding: 2px 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 99px;
+  letter-spacing: 0.02em;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 99px;
+  letter-spacing: 0.02em;
+}
+.live { background: rgba(26,122,74,0.25); color: #5de89a; border: 1px solid rgba(93,232,154,0.25); }
+.demo { background: rgba(232,86,42,0.2); color: #f4916e; border: 1px solid rgba(244,145,110,0.25); }
